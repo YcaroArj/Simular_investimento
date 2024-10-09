@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Julius+Sans+One&display=swap');
+:root{
+    --primary-color: #005655;
+    --secondary-color: #D1DFDE;
+}
+ 
+body{
+    margin: 0;
+    padding: 0;
+    height: 90vh;
+    font-family: 'Julius Sans One';
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container{
+     display: flex;
+     justify-content: space-evenly;
+     flex-direction: row;
+     margin: 20px;
+     background: var(--secondary-color);
+     border-radius: 20px;
+     height: 40vh;
+     width: 50vw;
+     padding: 50px;
+}
+
+label{
+    color: var(--primary-color);
+    font-size: 20px;
+}
+
+.input-style{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    height: 38px;
+    width: 351px;
+    border-radius: 10px;
+    background: #fff;
+    margin-bottom: 10px;
+}
+
+span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter';
+    background: var(--primary-color);
+    height: 38px;
+    width: 48px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    color: #fff;
+}
+
+input{
+    border: none;
+    background: transparent;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 100%;
+}
+
+input::placeholder{
+    color: var(--primary-color);
+    font-size: 15px;
+}
+
+input:focus{
+    outline: none;
+}
+
+button{
+    margin-top: 20px;
+    height: 38px;
+    width: 351px;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    background: var(--primary-color);
+    font-family: 'Julius Sans One';
+    cursor: pointer;
+}
+
+.cards-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    height: 146px;
+    width: 210px;
+    margin: 10px;
+    border-radius: 10px;
+    background: var(--secondary-color);
+}
+
+.card h1{
+    font-size: 20px;
+    color: var(--primary-color);
+}
+
+.card h2{
+    font-size: 24px;
+}
+
+@media (max-width: 1450px ) {
+    .container{
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+    }
+
+    .input-style{
+        width: 100%;
+    }
+
+    button{
+        width: 100%;
+    }
+}

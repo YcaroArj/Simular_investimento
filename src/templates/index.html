@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Calculadora de Investimentos</title>
+    <link href="../static/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <form action="{{url_for('simular')}}" method="POST">
+          <label>Investimento Inicial</label>
+          <div class="input-style">
+            <span>R$</span>
+            <input name="inv_inicial" id="valor" type="text" placeholder="0,00" required />
+          </div>
+
+          <label>Prazo</label>
+          <div class="input-style">
+            <span>Mês</span>
+            <input
+              name="prazo"
+              id="prazo"
+              type="text"
+              placeholder="0"
+              required
+            />
+          </div>
+
+          <label>Investimento Mensal</label>
+          <div class="input-style">
+            <span>R$</span>
+            <input
+              name="inv_mensal"
+              id="inv_mensal"
+              type="text"
+              placeholder="0,00"
+              required
+            />
+          </div>
+
+          <label>Rentabilidade</label>
+          <div class="input-style">
+            <span>%</span>
+            <input
+              name="rentabilidade"
+              id="rentabilidade"
+              type="text"
+              placeholder="0,00"
+              required
+            />
+          </div>
+
+          <button type="submit">Calcular</button>
+        </form>
+      </div>
+      <div class="cards-container">
+        <div class="card">
+          <h1>Valor Bruto</h1>
+          <h2>{{ valor_bruto }}</h2>
+        </div>
+        <div class="card">
+          <h1>Valor Investido</h1>
+          <h2>{{ valor_investido }}</h2>
+        </div>
+        <div class="card">
+          <h1>Valor em Juros</h1>
+          <h2>{{ valor_juros }}</h2>
+        </div>
+        <div class="card">
+          <h1>Valor Pago em Imposto de Renda</h1>
+          <h2>{{ valor_pago_IR }}</h2>
+        </div>
+        <div class="card">
+          <h1>Valor Líquido Total</h1>
+          <h2>{{ valor_liquido}}</h2>
+        </div>
+      </div>
+    </main>
+  
+  </body>
+</html>
